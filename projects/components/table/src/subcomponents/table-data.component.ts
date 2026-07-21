@@ -22,6 +22,7 @@ import { ITableDataSource, IZvTableAction, IZvTableSort, ZvTableActionScope } fr
 import { ZvTableActionsComponent } from './table-actions.component';
 import { ZvTableRowActionsComponent } from './table-row-actions.component';
 import { TableRowDetailComponent } from './table-row-detail.component';
+import { ZvTableActionsToRenderPipe } from '../pipes/table-actions-to-render.pipe';
 
 @Component({
   selector: 'zv-table-data',
@@ -46,6 +47,7 @@ import { TableRowDetailComponent } from './table-row-detail.component';
     ZvTableRowActionsComponent,
     TableRowDetailComponent,
     ZvTableRowDetail,
+    ZvTableActionsToRenderPipe,
     MatHeaderRowDef,
     MatHeaderRow,
     MatRowDef,

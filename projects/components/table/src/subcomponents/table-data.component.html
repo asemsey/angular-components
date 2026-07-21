@@ -66,11 +66,13 @@
   <!--Option Column-->
   <ng-container matColumnDef="options">
     <th class="zv-table-data__options-column-header" mat-header-cell *matHeaderCellDef>
-      @if (showListActions()) {
-        <button mat-icon-button type="button" [matMenuTriggerFor]="listActionsComponent.menu()">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <zv-table-actions #listActionsComponent [actions]="listActions" [items]="getSelectedRows()" />
+      @if (showListActions() && (listActions | zvTableActionsToRender: getSelectedRows()); as visibleListActions) {
+        @if (visibleListActions.length) {
+          <button mat-icon-button type="button" [matMenuTriggerFor]="listActionsComponent.menu()">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <zv-table-actions #listActionsComponent [actions]="listActions" [items]="getSelectedRows()" />
+        }
       }
     </th>
     <td class="zv-table-data__options-column" mat-cell *matCellDef="let element">

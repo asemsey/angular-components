@@ -1,5 +1,5 @@
 @if (combinedActions() | zvTableActionsToRender: item(); as visibleActions) {
-  @if (visibleActions.length >= (moreMenuThreshold() ?? 2) || openMenuFn()) {
+  @if (visibleActions.length > 0 && (visibleActions.length >= (moreMenuThreshold() ?? 2) || openMenuFn())) {
     <button mat-icon-button type="button" [matMenuTriggerFor]="rowActionsComponent.menu()" (click)="onMenuButtonClicked()">
       <mat-icon>more_vert</mat-icon>
     </button>
