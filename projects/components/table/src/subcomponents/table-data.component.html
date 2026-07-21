@@ -66,7 +66,7 @@
   <!--Option Column-->
   <ng-container matColumnDef="options">
     <th class="zv-table-data__options-column-header" mat-header-cell *matHeaderCellDef>
-      @if (showListActions && (listActions | zvTableActionsToRender: getSelectedRows()); as visibleListActions) {
+      @if (showListActions() && (listActions | zvTableActionsToRender: getSelectedRows()); as visibleListActions) {
         @if (visibleListActions.length) {
           <button mat-icon-button type="button" [matMenuTriggerFor]="listActionsComponent.menu()">
             <mat-icon>more_vert</mat-icon>
