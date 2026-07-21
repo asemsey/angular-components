@@ -47,7 +47,7 @@ import { ZvTableActionsToRenderPipe } from '../pipes/table-actions-to-render.pip
     ZvTableRowActionsComponent,
     TableRowDetailComponent,
     ZvTableRowDetail,
-    ZvTableActionsToRenderPipe
+    ZvTableActionsToRenderPipe,
     MatHeaderRowDef,
     MatHeaderRow,
     MatRowDef,
